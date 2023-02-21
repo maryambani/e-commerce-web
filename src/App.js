@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
 
-function App() {
+import { useEffect, lazy, Suspense } from 'react';
+
+import Spinner from './components/spinner/spinner.component';
+import { checkUserSession } from './store/user/user.action';
+
+const Home = lazy(() => import ('./routes/home/home.component'));
+const Authentication = lazy(() => import ('./routes/authentication/authentication.component'));
+const Navigation = lazy(() => import ('./routes/navigation/navigation.component'));
+const Shop = lazy(() => import ('./routes/shop/shop.component'));
+const Checkout = lazy(() => import ('./routes/checkout/checkout.component'));
+
+
+const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(checkUserSession());
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Testing testing <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<Spinner />}>
+      <Routes>
+        <Route path='/' element={<Navigation />}>
+          <Route index element={<Home />} />
+          <Route path='shop/*' element={<Shop />} />
+          <Route path='auth' element={<Authentication />} />
+          <Route path='checkout' element={<Checkout />} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
-}
+};
 
 export default App;
