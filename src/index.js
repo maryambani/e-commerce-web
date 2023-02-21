@@ -15,7 +15,7 @@ import reportWebVitals from './reportWebVitals';
 
 const rootElement = document.getElementById('root');
 
-ReactDOM.render(
+ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
