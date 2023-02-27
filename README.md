@@ -14,7 +14,17 @@ This is an e-commerce store built using React, Redux, GraphQL, Stripe and Fireba
 * State management with Redux, Redux Saga, and asynchronous Redux for scalable applications
 * Persistance and session storage for enhanced user experience
 
+## Getting Started
+You can view the project's live deployment [here](https://e-commerce-cyber-store.netlify.app/).
+
+To run the application locally, you'll need to follow these steps:
+
+1. Clone the repository.
+2. Install the dependencies using `npm install`.
+3. Create a `.env` file in the root directory and add your Stripe and Firebase API keys.
+4. Run the app using `npm start`.
+
 ## Screenshots
 
 ## Credits
-The product images used in thi app were obtained using Midjourney AI.
+The product images used in the app were obtained using Midjourney AI.
