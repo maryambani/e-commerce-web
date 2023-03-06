@@ -26,6 +26,8 @@ To run the application locally, you'll need to follow these steps:
 
 ## Screenshots
 ![e-commerce](https://user-images.githubusercontent.com/119344521/223005295-38486afb-b034-40a3-9456-135c62228aa7.png)
+![image](https://user-images.githubusercontent.com/119344521/223005583-dabaa370-5bcd-4965-8bf4-c3a2ce7f3816.png)
+
 
 ## Credits
 The product images used in the app were obtained using Midjourney AI.
