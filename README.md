@@ -25,6 +25,7 @@ To run the application locally, you'll need to follow these steps:
 4. Run the app using `npm start`.
 
 ## Screenshots
+![e-commerce](https://user-images.githubusercontent.com/119344521/223005295-38486afb-b034-40a3-9456-135c62228aa7.png)
 
 ## Credits
 The product images used in the app were obtained using Midjourney AI.
